@@ -1,0 +1,24 @@
+# ignore everything
+/*
+
+# explicitly allow what to track
+!.gitignore
+!.zshrc
+!.config/
+!.tmux.conf
+
+# Inside .config, only allow specific directories
+.config/*
+!.config/nvim/
+!.config/ghostty/
+!.config/karabiner/karabiner.json
+!.config/lsd/
+!.config/starship.toml
+
+# Ignore specific patterns within allowed directories
+.config/nvim/lazy-lock.json
+.config/**/node_modules/
+.config/**/.git/
+.DS_Store
+.dotfiles
+
