@@ -12,9 +12,9 @@ alias ....="cd ../../.."
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias zshcfg="nvim ~/.zshrc"
 alias nvimcfg="nvim ~/.config/nvim/init.lua"
-#alias vim="nvim"
+alias vim="nvim"
 alias l='lsd -l'
-alias ll='lsd -la'
+alias ll='lsd -latr'
 alias lt='lsd --tree'
 # git
 alias g='git'
@@ -28,6 +28,9 @@ alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gst='git status'
 alias gss='git status --short'
+# search
+alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
+alias vf='fzf -m --preview="bat --color=always {}" --bind "enter:become(code {+})"'
 
 alias webup='cd ~/GitHub/website/ && code . &&  open -a Arc http://localhost:3000/ && pnpm dev'
 alias estiup='cd ~/GitHub/esti/ && code . &&  open -a Arc http://localhost:5173/ && pnpm dev'
@@ -94,3 +97,20 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# fzf 
+# fzf parameters used in all widgets - configure layout and wrapped the preview results (useful in large command rendering)
+export FZF_DEFAULT_OPTS="--height 100% --layout reverse --preview-window=wrap"
+# CTRL + R: put the selected history command in the preview window - "{}" will be replaced by item selected in fzf execution runtime
+export FZF_CTRL_R_OPTS="--preview 'echo {}'"
+# CTRL + T: set "fd-find" as search engine instead of "find" and exclude .git for the results
+export FZF_CTRL_T_COMMAND="fd --exclude .git --ignore-file $HOME/.my-custom-zsh/.fd-fzf-ignore"
+# CTRL + T: put the file content if item select is a file, or put tree command output if item selected is directory
+export FZF_CTRL_T_OPTS="--preview '[ -d {} ] && tree -C {} || bat --color=always --style=numbers {}'"
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
+eval "$(fzf --zsh)"
