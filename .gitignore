@@ -10,6 +10,7 @@
 # Inside .config, only allow specific directories
 .config/*
 !.config/nvim/
+!.config/bat/
 !.config/ghostty/
 !.config/karabiner/karabiner.json
 !.config/lsd/
