@@ -31,6 +31,8 @@ alias gss='git status --short'
 # search
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias vf='fzf -m --preview="bat --color=always {}" --bind "enter:become(code {+})"'
+# hack to bypass https://github.com/junegunn/fzf/issues/164
+bindkey "ç" fzf-cd-widget
 
 alias webup='cd ~/GitHub/website/ && code . &&  open -a Arc http://localhost:3000/ && pnpm dev'
 alias estiup='cd ~/GitHub/esti/ && code . &&  open -a Arc http://localhost:5173/ && pnpm dev'
