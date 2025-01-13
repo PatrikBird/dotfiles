@@ -11,6 +11,7 @@
 .config/*
 !.config/nvim/
 !.config/bat/
+!.config/raycast/
 !.config/ghostty/
 !.config/karabiner/karabiner.json
 !.config/lsd/
