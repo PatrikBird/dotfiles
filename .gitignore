@@ -5,13 +5,13 @@
 !.gitignore
 !.zshrc
 !.tmux.conf
-!.config/scripts/*
 
 # Allow .config directory and specific contents
 !.config/
 .config/*
 !.config/vscode/
 !.config/nvim/
+!.config/scripts/
 !.config/bat/config
 !.config/ghostty/
 !.config/karabiner/karabiner.json
