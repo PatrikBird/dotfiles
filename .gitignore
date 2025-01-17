@@ -1,26 +1,26 @@
-# ignore everything
+# Ignore everything
 /*
 
-# explicitly allow what to track
+# Allow specific files in root
 !.gitignore
 !.zshrc
-!.config/
 !.tmux.conf
 
-# Inside .config, only allow specific directories
+# Allow .config directory and specific contents
+!.config/
 .config/*
+!.config/vscode/
 !.config/nvim/
 !.config/bat/config
-# !.config/raycast/
 !.config/ghostty/
 !.config/karabiner/karabiner.json
 !.config/lsd/
 !.config/starship.toml
 
-# Ignore specific patterns within allowed directories
-.config/nvim/lazy-lock.json
-.config/**/node_modules/
-.config/**/.git/
-.DS_Store
+# Global ignores (will apply to all directories)
+**/.DS_Store
+**/.git/
+**/node_modules/
+**/lazy-lock.json
 .dotfiles
 
