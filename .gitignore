@@ -5,6 +5,7 @@
 !.gitignore
 !.zshrc
 !.tmux.conf
+!.config/scripts/*
 
 # Allow .config directory and specific contents
 !.config/
