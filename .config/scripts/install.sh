@@ -17,27 +17,9 @@ install_homebrew
 echo "Updating Homebrew..."
 brew update
 
-# Install all brew formulas from the list
-if [ -f "installed-packages.txt" ]; then
-  echo "Installing brew formulas from installed-packages.txt..."
-  while IFS= read -r package; do
-    echo "Installing $package..."
-    brew install "$package"
-  done <installed-packages.txt
-else
-  echo "installed-packages.txt not found! Please make sure the file exists."
-fi
+# Install all packages listed in Brewfile
+brew bundle install --file=~/.config/brew/Brewfile
 
-# Install all brew casks (GUI applications) from the list
-if [ -f "installed-casks.txt" ]; then
-  echo "Installing brew casks from installed-casks.txt..."
-  while IFS= read -r cask; do
-    echo "Installing $cask..."
-    brew install --cask "$cask"
-  done <installed-casks.txt
-else
-  echo "installed-casks.txt not found! Please make sure the file exists."
-fi
 
 # Install bat catppuccin theme https://github.com/catppuccin/bat
 mkdir -p "$(bat --config-dir)/themes"
