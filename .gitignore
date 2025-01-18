@@ -11,6 +11,7 @@
 .config/*
 !.config/vscode/
 !.config/nvim/
+!.config/scripts/
 !.config/scripts/install.sh
 !.config/bat/config
 !.config/ghostty/
