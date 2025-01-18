@@ -11,8 +11,8 @@
 .config/*
 !.config/vscode/
 !.config/nvim/
+!.config/brew/
 !.config/scripts/
-!.config/scripts/install.sh
 !.config/bat/config
 !.config/ghostty/
 !.config/karabiner/karabiner.json
