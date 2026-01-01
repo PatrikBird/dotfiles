@@ -7,6 +7,7 @@ SAVEHIST=100000   # commands to save to file
 HISTFILE=~/.zsh_history
 export EDITOR=nvim
 
+# TODO: split apploft specific config to separate zsh file
 [[ -f ~/.config/apploft.zsh ]] && source ~/.config/apploft.zsh
 
 # directory

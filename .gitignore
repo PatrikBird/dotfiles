@@ -14,7 +14,7 @@
 !.config/brew/
 !.config/scripts/
 !.config/bat/config
-!.config/ghostty/
+!.config/ghostty/config
 !.config/karabiner/karabiner.json
 !.config/lsd/
 !.config/starship.toml
