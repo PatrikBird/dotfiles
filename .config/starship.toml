@@ -1,17 +1,16 @@
 # version: 1.0.0
-
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
 continuation_prompt = "[▸▹ ](dimmed white)"
+command_timeout = 1000
 
 palette = "catppuccin_macchiato"
 
 format = """
 $directory\
-$fill\
-$cmd_duration $jobs $git_status $git_state $git_branch $git_commit $nodejs $ruby\
+$cmd_duration $jobs $git_status $git_state $git_branch $git_commit $nodejs $python $ruby\
 $line_break\
 $sudo\
 $character"""

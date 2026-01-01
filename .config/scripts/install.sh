@@ -20,7 +20,6 @@ brew update
 # Install all packages listed in Brewfile
 brew bundle install --file=~/.config/brew/Brewfile
 
-
 # Install bat catppuccin theme https://github.com/catppuccin/bat
 mkdir -p "$(bat --config-dir)/themes"
 wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme

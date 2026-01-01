@@ -2,23 +2,19 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
   "editor.cursorBlinking": "solid",
-  "editor.fontFamily": "Geist",
+  "editor.fontFamily": "Zed",
   "editor.fontSize": 13,
   "editor.minimap.enabled": false,
-  "editor.scrollBeyondLastLine": false,
+  "editor.scrollBeyondLastLine": true,
   "editor.wordWrap": "off",
   "editor.lineNumbers": "relative",
+  "editor.guides.indentation": false,
+  "editor.inlineSuggest.enabled": true,
   "files.autoSave": "afterDelay",
-  "trailing-spaces.trimOnSave": false,
   "window.autoDetectColorScheme": true,
-  "workbench.preferredLightColorTheme": "Vitesse Light Soft",
-  "workbench.preferredDarkColorTheme": "Vitesse Dark Soft",
-  "workbench.sideBar.location": "right",
-  "tailwindCSS.experimental.classRegex": ["tw`([^`]*)`"],
-  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
-  // set postcss as default for css
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "css"
   },
   "files.watcherExclude": {
     "**/.bundle/**": true,
@@ -52,9 +48,58 @@
     "**/tmp": true,
     "**/vendor": true
   },
-  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.iconTheme": "catppuccin-latte",
   "git.confirmSync": false,
-  "git.enableSmartCommit": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "editor.tabSize": 2,
+  "git.autofetch": true,
+  "workbench.startupEditor": "none",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.external.osxExec": "Ghostty.app",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.sideBar.location": "right",
+  "editor.linkedEditing": true,
+  "git.ignoreRebaseWarning": true,
+  "github.copilot.selectedCompletionModel": "",
+  "git.replaceTagsWhenPull": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "todohighlight.isEnable": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "amp.url": "https://ampcode.com/",
+  "amp.tab.enabled": true,
+  "editor.wordBasedSuggestions": "off",
+  "amp.gpt5": false,
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "redhat.telemetry.enabled": true,
+  "yaml.schemas": {
+    "file:///Users/patrikvogel/.vscode/extensions/continue.continue-1.2.5-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "git.suggestSmartCommit": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "pnpm": true
+  },
+  "chat.viewSessions.orientation": "stacked"
 }

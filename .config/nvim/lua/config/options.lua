@@ -36,6 +36,14 @@ vim.opt.scrolloff = 8
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
+-- Userful converts
+vim.keymap.set(
+	"n",
+	"<leader>kc",
+	"viw:s/\\([a-z]\\)\\([A-Z]\\)/\\1-\\l\\2/g<CR>",
+	{ desc = "Convert camelCase to kebab-case for current word" }
+)
+
 -- Remaps
 vim.keymap.set("n", "<leader>r", "<cmd>source $MYVIMRC<CR>", { desc = "Reload nvim cfg" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "quit file" })
