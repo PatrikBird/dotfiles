@@ -28,7 +28,12 @@ wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/
 wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
 bat cache --build
 
+# tmux setup and theme
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
+
 # set symlinks to vscode user settings directory
 ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s ~/.config/vscode/snippets/vue.code-snippets ~/Library/Application\ Support/Code/User/snippets/vue.code-snippets
+

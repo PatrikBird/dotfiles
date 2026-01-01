@@ -48,7 +48,7 @@
     "**/tmp": true,
     "**/vendor": true
   },
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "git.confirmSync": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "explorer.confirmDelete": false,
