@@ -16,6 +16,7 @@ alias vim="nvim"
 alias l='lsd -l'
 alias ll='lsd -latr'
 alias lt='lsd --tree'
+alias cdl='cd '
 # git
 alias g='git'
 alias ga='git add'
@@ -28,6 +29,7 @@ alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gst='git status'
 alias gss='git status --short'
+alias grb='git rebase -i HEAD~10'
 # search
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias vf='fzf -m --preview="bat --color=always {}" --bind "enter:become(code {+})"'
@@ -91,6 +93,12 @@ if [ -f '/Users/bird/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 # Created by `pipx` on 2024-12-12 10:17:45
 export PATH="$PATH:/Users/bird/.local/bin"
 
+# tmux
+if command -v tmux &> /dev/null && [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
+  tmux new-session
+fi
+
+# starship prompt
 eval "$(starship init zsh)"
 
 # add plugins
@@ -116,3 +124,6 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi"
 eval "$(fzf --zsh)"
+
+# opencode
+export PATH=/Users/bird/.opencode/bin:$PATH

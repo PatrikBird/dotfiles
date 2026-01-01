@@ -55,6 +55,12 @@ cherry_pick = '[🍒 PICKING](bold red)'
 up_to_date = ''
 staged = '[++\($count\)](green)'
 
+[python]
+format = "[$symbol $version]($style)"
+python_binary = 'python3'
+pyenv_version_name = true
+symbol = '🐍 '
+
 [ruby]
 format = "[$symbol $version]($style)"
 symbol = ""

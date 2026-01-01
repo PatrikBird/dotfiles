@@ -10,10 +10,9 @@ background-blur-radius = 10
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-theme = Catppuccin Mocha
+theme = catppuccin-mocha
 font-family = "Geist Mono"
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 font-size = 14
-keybind = shift+enter=text:\n
