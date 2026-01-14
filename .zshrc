@@ -36,9 +36,11 @@ alias gf='git fetch'
 alias glo='git log --oneline --decorate'
 alias gl='git pull'
 alias gp='git push'
+alias gcm='git checkout main'
 alias gpf='git push --force-with-lease'
 alias gss='git status --short'
 alias grb='git rebase -i HEAD~10'
+alias grbm='git fetch origin main:main && git rebase main'
 alias gst='git status'
 alias gstash='read msg\?"Stash message: " && git stash push -m "$msg" -u'
 alias gs='git stash'
@@ -158,9 +160,9 @@ export LDFLAGS="-L/opt/homebrew/opt/mysql-client@8.0/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/mysql-client@8.0/include"
 
 # tmux
-if command -v tmux &> /dev/null && [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
-  tmux new-session
-fi
+#if command -v tmux &> /dev/null && [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
+#  tmux new-session
+#fi
 
 # init starship
 eval "$(starship init zsh)"
